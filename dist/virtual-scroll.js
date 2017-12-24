@@ -150,7 +150,7 @@ var VirtualScrollComponent = (function () {
             if (this.containerElementRef && this.containerElementRef.nativeElement) {
                 content = this.containerElementRef.nativeElement;
             }
-            contentDimensions = content.children[0] ? content.children[0].getBoundingClientRect() : {
+            contentDimensions = content.children[0] && content.children[0].getBoundingClientRect ? content.children[0].getBoundingClientRect() : {
                 width: viewWidth,
                 height: viewHeight
             };
